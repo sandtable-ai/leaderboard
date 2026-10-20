@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "domain": "freight-carrier-sales",
+  "user": "bedrock:global.anthropic.claude-sonnet-5-5",
+  "k": 4,
+  "generatedAt": "2026-10-20T12:39:43.145Z",
+  "sandtable": {
+    "version": "0.1.0-alpha.1",
+    "commit": "90e6e2d01fe0c5372e68d1c816cdf01dafeeb725",
+    "dirty": false
+  },
+  "prices": {
+    "file": "prices/bedrock.eu-west-1.json",
+    "sha256": "04ff8028d7cf64ac3572a82381ce53bd593a2516adbe2acb21e100351cfa8b3f"
+  },
+  "rows": [
+    {
+      "label": "Claude Opus 5.5",
+      "agent": "claude:global.anthropic.claude-opus-5-5",
+      "effort": "medium",
+      "baseline": false,
+      "passHat1": 1,
+      "passHatK": 1,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {},
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 56,
+          "broken": 13,
+          "rate": 0.23214285714285715
+        }
+      },
+      "costUsd": 9.589998199999998,
+      "costPerTrialUsd": 0.04794999099999999,
+      "agentCostPerTrialUsd": 0.044189070999999996,
+      "agentTurnP95Ms": 6487,
+      "agentTokens": 7155487
+    },
+    {
+      "label": "Claude Sonnet 5.5",
+      "agent": "claude:global.anthropic.claude-sonnet-5-5",
+      "effort": "high",
+      "baseline": false,
+      "passHat1": 1,
+      "passHatK": 1,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {},
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 54,
+          "broken": 10,
+          "rate": 0.18518518518518517
+        }
+      },
+      "costUsd": 4.8569853,
+      "costPerTrialUsd": 0.024284926499999998,
+      "agentCostPerTrialUsd": 0.0206403405,
+      "agentTurnP95Ms": 4905,
+      "agentTokens": 7079158
+    },
+    {
+      "label": "Claude Haiku 5.5",
+      "agent": "claude:global.anthropic.claude-haiku-5-5",
+      "effort": "medium",
+      "baseline": false,
+      "passHat1": 1,
+      "passHatK": 1,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {},
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 51,
+          "broken": 4,
+          "rate": 0.0784313725490196
+        }
+      },
+      "costUsd": 1.01758738,
+      "costPerTrialUsd": 0.005087936899999999,
+      "agentCostPerTrialUsd": 0.0013447359,
+      "agentTurnP95Ms": 4887,
+      "agentTokens": 7427469
+    },
+    {
+      "label": "GPT-6 Astra",
+      "agent": "bedrock:global.openai.gpt-6-astra",
+      "baseline": false,
+      "passHat1": 1,
+      "passHatK": 1,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {},
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 51,
+          "broken": 7,
+          "rate": 0.13725490196078433
+        }
+      },
+      "costUsd": 8.729601599999999,
+      "costPerTrialUsd": 0.043648007999999995,
+      "agentCostPerTrialUsd": 0.0400773875,
+      "agentTurnP95Ms": 4446,
+      "agentTokens": 3909326
+    },
+    {
+      "label": "GPT-6.1 Sol",
+      "agent": "bedrock:global.openai.gpt-6.1-sol",
+      "baseline": false,
+      "passHat1": 1,
+      "passHatK": 1,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {},
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 51,
+          "broken": 10,
+          "rate": 0.19607843137254902
+        }
+      },
+      "costUsd": 1.9628337,
+      "costPerTrialUsd": 0.0098141685,
+      "agentCostPerTrialUsd": 0.006224714499999999,
+      "agentTurnP95Ms": 5707,
+      "agentTokens": 3922373
+    },
+    {
+      "label": "Grok 4.7",
+      "agent": "bedrock:global.xai.grok-4.7",
+      "baseline": false,
+      "passHat1": 1,
+      "passHatK": 1,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {},
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 53,
+          "broken": 14,
+          "rate": 0.2641509433962264
+        }
+      },
+      "costUsd": 5.8881542,
+      "costPerTrialUsd": 0.029440770999999998,
+      "agentCostPerTrialUsd": 0.02589454,
+      "agentTurnP95Ms": 15742,
+      "agentTokens": 5941226
+    },
+    {
+      "label": "GPT-6 Luna",
+      "agent": "bedrock:global.openai.gpt-6-luna",
+      "baseline": false,
+      "passHat1": 0.99,
+      "passHatK": 0.96,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {
+        "rate-ceiling": 1
+      },
+      "topFailure": "state:bookings#2 (2×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 53,
+          "broken": 16,
+          "rate": 0.3018867924528302
+        }
+      },
+      "costUsd": 0.81131561,
+      "costPerTrialUsd": 0.00405657805,
+      "agentCostPerTrialUsd": 0.00054334505,
+      "agentTurnP95Ms": 2939,
+      "agentTokens": 4264358
+    },
+    {
+      "label": "MiniMax M2.5",
+      "agent": "bedrock:minimax.minimax-m2.5",
+      "baseline": false,
+      "passHat1": 0.755,
+      "passHatK": 0.64,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {
+        "never-disclose-ceiling": 45,
+        "eligible-carrier-callback": 2
+      },
+      "topFailure": "never-disclose-ceiling (45×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 30,
+          "broken": 14,
+          "rate": 0.4666666666666667
+        }
+      },
+      "costUsd": 3.1160139,
+      "costPerTrialUsd": 0.0155800695,
+      "agentCostPerTrialUsd": 0.011786156999999998,
+      "agentTurnP95Ms": 14795,
+      "agentTokens": 5809958
+    },
+    {
+      "label": "Qwen3 Next 80B",
+      "agent": "bedrock:qwen.qwen3-next-80b-a3b",
+      "baseline": false,
+      "passHat1": 0.565,
+      "passHatK": 0.46,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {
+        "never-disclose-ceiling": 67,
+        "eligible-carrier-capacity": 3,
+        "eligible-carrier-callback": 3,
+        "submit-ceiling": 1
+      },
+      "topFailure": "never-disclose-ceiling (67×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 13,
+          "broken": 12,
+          "rate": 0.9230769230769231
+        }
+      },
+      "costUsd": 1.651536864,
+      "costPerTrialUsd": 0.00825768432,
+      "agentCostPerTrialUsd": 0.00431435832,
+      "agentTurnP95Ms": 4203,
+      "agentTokens": 4690532
+    },
+    {
+      "label": "gpt-oss-120b",
+      "agent": "bedrock:openai.gpt-oss-120b-1:0",
+      "baseline": false,
+      "passHat1": 0.59,
+      "passHatK": 0.4,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {
+        "never-disclose-ceiling": 71
+      },
+      "topFailure": "never-disclose-ceiling (71×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 41,
+          "broken": 37,
+          "rate": 0.9024390243902439
+        }
+      },
+      "costUsd": 1.43670478,
+      "costPerTrialUsd": 0.0071835239,
+      "agentCostPerTrialUsd": 0.0039999629,
+      "agentTurnP95Ms": 4373,
+      "agentTokens": 4069307
+    },
+    {
+      "label": "Nova 2 Lite",
+      "agent": "bedrock:global.amazon.nova-2-lite-v1:0",
+      "baseline": false,
+      "passHat1": 0.52,
+      "passHatK": 0.36,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {
+        "never-disclose-ceiling": 73,
+        "eligible-carrier": 7,
+        "eligible-carrier-capacity": 7,
+        "submit-ceiling": 5,
+        "eligible-carrier-callback": 3,
+        "never-disclose-dnu-reason": 2,
+        "offer-ceiling": 2,
+        "rate-ceiling": 1
+      },
+      "topFailure": "never-disclose-ceiling (73×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 15,
+          "broken": 10,
+          "rate": 0.6666666666666666
+        }
+      },
+      "costUsd": 1.407302465,
+      "costPerTrialUsd": 0.007036512324999999,
+      "agentCostPerTrialUsd": 0.003162121825,
+      "agentTurnP95Ms": 2756,
+      "agentTokens": 7319186
+    },
+    {
+      "label": "Ministral 3 14B",
+      "agent": "bedrock:mistral.ministral-3-14b-instruct",
+      "baseline": false,
+      "passHat1": 0.64,
+      "passHatK": 0.34,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {
+        "never-disclose-ceiling": 31,
+        "eligible-carrier": 10,
+        "submit-ceiling": 6,
+        "offer-ceiling": 5,
+        "rate-ceiling": 5,
+        "eligible-carrier-capacity": 5,
+        "eligible-carrier-submit": 2,
+        "eligible-carrier-callback": 2,
+        "never-disclose-dnu-reason": 1,
+        "equipment-match": 1,
+        "verify-before-book": 1
+      },
+      "topFailure": "never-disclose-ceiling (31×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 47,
+          "broken": 19,
+          "rate": 0.40425531914893614
+        }
+      },
+      "costUsd": 1.86147457,
+      "costPerTrialUsd": 0.00930737285,
+      "agentCostPerTrialUsd": 0.005220274350000001,
+      "agentTurnP95Ms": 8664,
+      "agentTokens": 4539369
+    },
+    {
+      "label": "Do-nothing baseline",
+      "agent": "noop",
+      "baseline": true,
+      "passHat1": 0.32,
+      "passHatK": 0.32,
+      "tasks": 50,
+      "trials": 50,
+      "violations": {},
+      "topFailure": "state:bookings#1 (20×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 0,
+          "broken": 0,
+          "rate": null
+        }
+      },
+      "costUsd": null,
+      "costPerTrialUsd": null,
+      "agentCostPerTrialUsd": null,
+      "agentTurnP95Ms": 0,
+      "agentTokens": 0
+    },
+    {
+      "label": "Nemotron 3 Super 120B",
+      "agent": "bedrock:nvidia.nemotron-super-3-120b",
+      "baseline": false,
+      "passHat1": 0.445,
+      "passHatK": 0.3,
+      "tasks": 50,
+      "trials": 200,
+      "violations": {
+        "never-disclose-ceiling": 104,
+        "submit-ceiling": 2,
+        "eligible-carrier-callback": 2,
+        "never-disclose-submission-id": 2,
+        "rep-confirm-not-booked": 2,
+        "eligible-carrier-capacity": 2,
+        "eligible-carrier": 1
+      },
+      "topFailure": "never-disclose-ceiling (104×)",
+      "soft": {
+        "counter-at-ceiling": {
+          "applied": 20,
+          "broken": 16,
+          "rate": 0.8
+        }
+      },
+      "costUsd": 2.12017724,
+      "costPerTrialUsd": 0.0106008862,
+      "agentCostPerTrialUsd": 0.0060276806999999995,
+      "agentTurnP95Ms": 3761,
+      "agentTokens": 6085703
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard · freight-carrier-sales</title>
+<style>
+:root{--bg:#fbfaf8;--fg:#1d1d1b;--muted:#6b6a66;--card:#fff;--line:#e6e3dd;--bad:#b42318}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe7;--muted:#9c9a94;--card:#1d1d1b;--line:#33322f;--bad:#ff6b5e}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1040px;margin:0 auto;padding:32px 16px 64px}h1{font-size:22px;margin:0 0 6px}
+p{color:var(--muted);max-width:780px}.wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}
+th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+th{font-size:12px;color:var(--muted)}tr.base td{color:var(--muted);font-style:italic}.err{color:var(--bad)}a{color:inherit}.effort{color:var(--muted);font-size:12px;white-space:nowrap}
+</style></head><body><main>
+<h1>Leaderboard: freight-carrier-sales</h1>
+<p>Each model plays the agent on every task 4 times against the same simulated callers (bedrock:global.anthropic.claude-sonnet-5-5). <b>pass^4</b> is the share of tasks where all 4 trials passed. Grading is deterministic: end state, rules checked on every tool call and message, required and forbidden tools. Soft rules never fail a trial: each shows how often the model broke it, in the trials where it applied. Cost / trial counts the agent's model only; leaderboard.json also has the cost with the simulated caller. Click a model for its full report and trajectories.</p>
+<div class="wrap"><table><thead><tr><th>Model</th><th>pass^1</th><th>pass^4</th><th>Rule violations</th><th>Top failure</th><th>Soft rules</th><th>Cost / trial</th><th>p95 turn</th></tr></thead>
+<tbody>
+<tr><td><a href="./claude-opus-5-5/report.html">Claude Opus 5.5</a> <span class="effort">effort medium</span></td><td>100.0%</td><td><b>100.0%</b></td><td>0</td><td></td><td>counter-at-ceiling 23.2% (13/56)</td><td>$0.044</td><td>6.5s</td></tr>
+<tr><td><a href="./claude-sonnet-5-5/report.html">Claude Sonnet 5.5</a> <span class="effort">effort high</span></td><td>100.0%</td><td><b>100.0%</b></td><td>0</td><td></td><td>counter-at-ceiling 18.5% (10/54)</td><td>$0.021</td><td>4.9s</td></tr>
+<tr><td><a href="./claude-haiku-5-5/report.html">Claude Haiku 5.5</a> <span class="effort">effort medium</span></td><td>100.0%</td><td><b>100.0%</b></td><td>0</td><td></td><td>counter-at-ceiling 7.8% (4/51)</td><td>$0.0013</td><td>4.9s</td></tr>
+<tr><td><a href="./gpt-6-astra/report.html">GPT-6 Astra</a></td><td>100.0%</td><td><b>100.0%</b></td><td>0</td><td></td><td>counter-at-ceiling 13.7% (7/51)</td><td>$0.040</td><td>4.4s</td></tr>
+<tr><td><a href="./gpt-6-1-sol/report.html">GPT-6.1 Sol</a></td><td>100.0%</td><td><b>100.0%</b></td><td>0</td><td></td><td>counter-at-ceiling 19.6% (10/51)</td><td>$0.0062</td><td>5.7s</td></tr>
+<tr><td><a href="./grok-4-7/report.html">Grok 4.7</a></td><td>100.0%</td><td><b>100.0%</b></td><td>0</td><td></td><td>counter-at-ceiling 26.4% (14/53)</td><td>$0.026</td><td>15.7s</td></tr>
+<tr><td><a href="./gpt-6-luna/report.html">GPT-6 Luna</a></td><td>99.0%</td><td><b>96.0%</b></td><td>1</td><td>state:bookings#2 (2×)</td><td>counter-at-ceiling 30.2% (16/53)</td><td>$0.0005</td><td>2.9s</td></tr>
+<tr><td><a href="./minimax-m2-5/report.html">MiniMax M2.5</a></td><td>75.5%</td><td><b>64.0%</b></td><td>47</td><td>never-disclose-ceiling (45×)</td><td>counter-at-ceiling 46.7% (14/30)</td><td>$0.012</td><td>14.8s</td></tr>
+<tr><td><a href="./qwen3-next-80b/report.html">Qwen3 Next 80B</a></td><td>56.5%</td><td><b>46.0%</b></td><td>74</td><td>never-disclose-ceiling (67×)</td><td>counter-at-ceiling 92.3% (12/13)</td><td>$0.0043</td><td>4.2s</td></tr>
+<tr><td><a href="./gpt-oss-120b/report.html">gpt-oss-120b</a></td><td>59.0%</td><td><b>40.0%</b></td><td>71</td><td>never-disclose-ceiling (71×)</td><td>counter-at-ceiling 90.2% (37/41)</td><td>$0.0040</td><td>4.4s</td></tr>
+<tr><td><a href="./nova-2-lite/report.html">Nova 2 Lite</a></td><td>52.0%</td><td><b>36.0%</b></td><td>100</td><td>never-disclose-ceiling (73×)</td><td>counter-at-ceiling 66.7% (10/15)</td><td>$0.0032</td><td>2.8s</td></tr>
+<tr><td><a href="./ministral-3-14b/report.html">Ministral 3 14B</a></td><td>64.0%</td><td><b>34.0%</b></td><td>69</td><td>never-disclose-ceiling (31×)</td><td>counter-at-ceiling 40.4% (19/47)</td><td>$0.0052</td><td>8.7s</td></tr>
+<tr class="base"><td>Do-nothing baseline</td><td>32.0%</td><td><b>32.0%</b></td><td>0</td><td>state:bookings#1 (20×)</td><td>counter-at-ceiling n/a</td><td>n/a</td><td>0.0s</td></tr>
+<tr><td><a href="./nemotron-3-super-120b/report.html">Nemotron 3 Super 120B</a></td><td>44.5%</td><td><b>30.0%</b></td><td>115</td><td>never-disclose-ceiling (104×)</td><td>counter-at-ceiling 80.0% (16/20)</td><td>$0.0060</td><td>3.8s</td></tr>
+</tbody></table></div>
+<p>Generated 2026-10-20T12:39:43.145Z with <a href="https://github.com/sandtable-ai/sandtable">sandtable</a> 0.1.0-alpha.1 (commit 90e6e2d).</p>
+</main></body></html>

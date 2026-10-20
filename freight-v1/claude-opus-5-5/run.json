@@ -1,0 +1,10 @@
+{
+  "agent": "claude:global.anthropic.claude-opus-5-5",
+  "sandtable": {
+    "version": "0.1.0-alpha.1",
+    "commit": "6ad55beb25d222445c46b95ae9084de3794924e6",
+    "dirty": false
+  },
+  "provider": "bedrock",
+  "region": "eu-west-1"
+}

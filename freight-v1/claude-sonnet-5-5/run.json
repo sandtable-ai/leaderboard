@@ -1,0 +1,11 @@
+{
+  "agent": "claude:global.anthropic.claude-sonnet-5-5",
+  "effort": "high",
+  "sandtable": {
+    "version": "0.1.0-alpha.1",
+    "commit": "ea6fb39ba1d69967b3b416cf07324839a6b9168d",
+    "dirty": false
+  },
+  "provider": "bedrock",
+  "region": "eu-west-1"
+}
