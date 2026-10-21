@@ -26,7 +26,7 @@ Grading needs no model, so anyone can re-score the stored trials under the freig
 
 ```bash
 git clone https://github.com/sandtable-ai/sandtable && cd sandtable
-git checkout 90e6e2d   # the grading commit recorded in freight-v1/leaderboard.json
+git checkout eb4cfd2   # v0.1.2, the grading commit recorded in freight-v1/leaderboard.json
 npm ci
 node src/cli.ts regrade ../leaderboard/freight-v1/claude-opus-5-5/results.json -d examples/freight -o /tmp/regraded
 ```
