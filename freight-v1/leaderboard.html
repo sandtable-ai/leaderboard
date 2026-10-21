@@ -2,16 +2,18 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaderboard · freight-carrier-sales</title>
 <style>
-:root{--bg:#fbfaf8;--fg:#1d1d1b;--muted:#6b6a66;--card:#fff;--line:#e6e3dd;--bad:#b42318}
-@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe7;--muted:#9c9a94;--card:#1d1d1b;--line:#33322f;--bad:#ff6b5e}}
-body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:1040px;margin:0 auto;padding:32px 16px 64px}h1{font-size:22px;margin:0 0 6px}
+:root{color-scheme:light dark;--bg:#F6F1E8;--fg:#1E1A16;--muted:#6B6156;--card:#FBF8F2;--line:#DDD3C4;--chip:#EEE7DB;--bad:#B4532A;--bad-text:#9C3F20;--ok:var(--fg);
+--sans:"Fira Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"Fira Code",ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#171512;--fg:#E9E3D8;--muted:#A39886;--card:#1F1C18;--line:#3A342D;--chip:#2A2621;--bad-text:#F0A374}}
+.head{display:flex;align-items:flex-start;gap:8px}.head svg{flex:none;margin-top:4px}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--sans)}
+main{max-width:1040px;margin:0 auto;padding:32px 16px 64px}h1{font-size:22px;line-height:32px;margin:0 0 8px}
 p{color:var(--muted);max-width:780px}.wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}
-th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
-th{font-size:12px;color:var(--muted)}tr.base td{color:var(--muted);font-style:italic}.err{color:var(--bad)}a{color:inherit}.effort{color:var(--muted);font-size:12px;white-space:nowrap}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:4px}
+th,td{text-align:left;padding:8px 16px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}tr:last-child td{border-bottom:0}
+th{font-size:12px;color:var(--muted)}tr.base td{color:var(--muted);font-style:italic}.err{color:var(--bad-text)}a{color:inherit}.effort{color:var(--muted);font-size:12px;white-space:nowrap}
 </style></head><body><main>
-<h1>Leaderboard: freight-carrier-sales</h1>
+<div class="head"><svg viewBox="0 0 48 48" width="24" height="24" aria-hidden="true"><g fill="currentColor"><rect x="2" y="2" width="12" height="12" rx="2"/><rect x="18" y="2" width="12" height="12" rx="2"/><rect x="34" y="2" width="12" height="12" rx="2"/><rect x="2" y="18" width="12" height="12" rx="2"/><rect x="18" y="18" width="12" height="12" rx="2"/><rect x="2" y="34" width="12" height="12" rx="2"/><rect x="18" y="34" width="12" height="12" rx="2"/><rect x="34" y="34" width="12" height="12" rx="2"/></g><rect x="34" y="18" width="12" height="12" rx="2" style="fill:var(--bad)"/></svg><h1>Leaderboard: freight-carrier-sales</h1></div>
 <p>Each model plays the agent on every task 4 times against the same simulated callers (bedrock:global.anthropic.claude-sonnet-5-5). <b>pass^4</b> is the share of tasks where all 4 trials passed. Grading is deterministic: end state, rules checked on every tool call and message, required and forbidden tools. Soft rules never fail a trial: each shows how often the model broke it, in the trials where it applied. Cost / trial counts the agent's model only; leaderboard.json also has the cost with the simulated caller. Click a model for its full report and trajectories.</p>
 <div class="wrap"><table><thead><tr><th>Model</th><th>pass^1</th><th>pass^4</th><th>Rule violations</th><th>Top failure</th><th>Soft rules</th><th>Cost / trial</th><th>p95 turn</th></tr></thead>
 <tbody>
@@ -30,5 +32,5 @@ th{font-size:12px;color:var(--muted)}tr.base td{color:var(--muted);font-style:it
 <tr class="base"><td>Do-nothing baseline</td><td>32.0%</td><td><b>32.0%</b></td><td>0</td><td>state:bookings#1 (20×)</td><td>counter-at-ceiling n/a</td><td>n/a</td><td>0.0s</td></tr>
 <tr><td><a href="./nemotron-3-super-120b/report.html">Nemotron 3 Super 120B</a></td><td>44.5%</td><td><b>30.0%</b></td><td>115</td><td>never-disclose-ceiling (104×)</td><td>counter-at-ceiling 80.0% (16/20)</td><td>$0.0060</td><td>3.8s</td></tr>
 </tbody></table></div>
-<p>Generated 2026-10-20T12:39:43.145Z with <a href="https://github.com/sandtable-ai/sandtable">sandtable</a> 0.1.0-alpha.1 (commit 90e6e2d).</p>
+<p>Generated 2026-10-21T10:57:15.687Z with <a href="https://github.com/sandtable-ai/sandtable">sandtable</a> 0.1.2 (commit eb4cfd2).</p>
 </main></body></html>

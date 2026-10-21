@@ -19,4 +19,4 @@ Each model plays the agent on every task 4 times, against the same simulated cal
 |  | _Do-nothing baseline_ | 32.0% | 32.0% | 0 | state:bookings#1 (20×) | counter-at-ceiling n/a | n/a | 0.0s |
 | 13 | Nemotron 3 Super 120B | 44.5% | 30.0% | 115 | never-disclose-ceiling (104×) | counter-at-ceiling 80.0% (16/20) | $0.0060 | 3.8s |
 
-Generated 2026-10-20T12:39:43.145Z with [sandtable](https://github.com/sandtable-ai/sandtable) 0.1.0-alpha.1 (commit 90e6e2d). Per-model reports and trajectories are in the folders next to this file.
+Generated 2026-10-21T10:57:15.687Z with [sandtable](https://github.com/sandtable-ai/sandtable) 0.1.2 (commit eb4cfd2). Per-model reports and trajectories are in the folders next to this file.
